@@ -1229,3 +1229,37 @@ h6 {
     padding-left: 50px;
     border-radius: 5px;
 }
+.section_title{
+    color:#0a7151;
+    font-size: 25px;
+    text-align: center;
+}
+.section_hr{
+    border: none;
+    height: 2px;
+    color: #0a7151;
+    background-color: #0a7151;
+}
+.category_detail{
+    color: #0a7151;
+    font-size: 18px;
+    text-align: center;
+}
+.category_hoolder{
+    border: 1px solid #0a7151;
+}
+
+.float-cart {
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    z-index: 99999;
+    background: linear-gradient(-45deg, rgba(10, 113, 81, 1) 0%, rgba(30, 156, 117, 1) 35%, rgba(188, 207, 96, 1) 100%);
+    color: white;
+    text-align: center;
+    width: 80px;
+    height: 140px;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+}

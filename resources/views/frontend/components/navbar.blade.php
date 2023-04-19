@@ -4,13 +4,14 @@
     <div class="d-flex align-items-center justify-content-between">
         <a href="{{ route('welcome') }}" class="logo d-flex align-items-center">
             <img src="{{ asset('assets/img/logo.png') }}" alt="{{ config('siteConfig.app.name') }}">
+            <span class="d-none d-lg-block">লতিফ এন্ড সন্স</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
-    <div class="search-bar">
-        <form class="search-form d-flex align-items-center" method="POST" action="#">
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+    <div class="search-bar col-lg-8">
+        <form class="search-form d-flex align-items-center category_hoolder" method="get" action="#">
+            <input type="text" name="query" placeholder="এখানে সার্চ করুন" title="এখানে সার্চ করুন">
             <button type="submit" title="Search"><i class="bi bi-search"></i></button>
         </form>
     </div><!-- End Search Bar -->

@@ -15,3 +15,4 @@ use App\Http\Controllers\Frontend\PageController;
 */
 
 Route::get('/',[PageController::class,'Index'])->name('welcome');
+Route::get('/cart',[PageController::class,'Index'])->name('cart');
