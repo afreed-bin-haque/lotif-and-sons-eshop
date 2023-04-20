@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Backend\LoginAccessController;
+use App\Http\Controllers\Visitor\VisitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::prefix('log')->group(function(){
     Route::get('/in',[LoginAccessController::class,'ViewLoginPage'])->name('log.in');
 });
 Route::get('/register',[LoginAccessController::class,'Register'])->name('register.here');
+Route::prefix('visitor')->group(function(){
+    Route::get('/upload/list',[VisitorController::class,'ViewUploadList'])->name('view.upload_list');
+});

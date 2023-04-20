@@ -25,6 +25,10 @@
   <link href="{{ asset('assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
-  <!-- Template Main CSS File -->
+  <!--  Main CSS File -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+  <!--  Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script href="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>

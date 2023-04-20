@@ -28,7 +28,7 @@
 
             <li class="nav-item dropdown pe-3">
 
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#">
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{ route('view.upload_list') }}">
                     <i class="bi bi-camera2 nav_icon_size"></i>
                     <div class="mini_screen">
                         <span class="d-none d-md-block ps-2 pe-2">ফর্দ আপলোড করুন</span>

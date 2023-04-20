@@ -1,4 +1,4 @@
-@extends('frontend.layouts.web-master')
+@extends('frontend.layouts.auth-master')
 @section('content')
 <section class="section register d-flex flex-column align-items-center justify-content-center py-4">
     <div class="container">
@@ -17,26 +17,39 @@
                         <form class="row g-3 needs-validation" novalidate="">
 
                             <div class="col-12">
+                                <label for="name" class="form-label">আপনার নাম</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" id="name" name="name" required="">
+                                    <div class="invalid-feedback">আপনার নাম লিখুন</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
                                 <label for="yourUsername" class="form-label">ফোন নাম্বার</label>
                                 <div class="input-group has-validation">
-                                    <input type="number" name="username" class="form-control" id="yourUsername"
+                                    <input type="number" name="phone" class="form-control" id="phone"
                                         required="">
-                                    <div class="invalid-feedback">আপনার রেজিস্টার্ড ফোন নাম্বার দিন</div>
+                                    <div class="invalid-feedback">আপনার ফোন নাম্বার লিখুন</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="yourUsername" class="form-label">ইমেইল অ্যাড্রেস <span class="text-success">(ঐচ্ছিক *** পাসওয়ার্ড রিকভারির জন্য প্রযোজ্য)</span></label>
+                                <div class="input-group has-validation">
+                                    <input type="email" name="email" class="form-control" id="email" >
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <label for="yourPassword" class="form-label">পাসওয়ার্ড</label>
-                                <input type="password" name="password" class="form-control text-center" id="yourPassword"
+                                <input type="password" name="password" class="form-control text-center" id="password
                                     required="">
-                                <div class="invalid-feedback">আপনার পাসওয়ার্ড দিন</div>
+                                <div class="invalid-feedback">আপনার পাসওয়ার্ড লিখুন</div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" value="true"
-                                        id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">পাসওয়ার্ড দেখুন</label>
+                                    <input class="form-check-input" type="checkbox" name="see_password" value="true" id="see_password">
+                                    <label class="form-check-label" for="see_password">পাসওয়ার্ড দেখুন</label>
                                 </div>
                             </div>
                             <div class="col-12">
