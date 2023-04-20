@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\PageController;
+use App\Http\Controllers\Backend\LoginAccessController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use App\Http\Controllers\Frontend\PageController;
 
 Route::get('/',[PageController::class,'Index'])->name('welcome');
 Route::get('/cart',[PageController::class,'Index'])->name('cart');
+Route::prefix('log')->group(function(){
+    Route::get('/in',[LoginAccessController::class,'ViewLoginPage'])->name('log.in');
+});
+Route::get('/register',[LoginAccessController::class,'Register'])->name('register.here');

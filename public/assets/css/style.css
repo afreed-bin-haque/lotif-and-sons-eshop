@@ -1254,7 +1254,7 @@ h6 {
     right: 15px;
     top: 50%;
     z-index: 99999;
-    background: linear-gradient(-45deg, rgba(10, 113, 81, 1) 0%, rgba(30, 156, 117, 1) 35%, rgba(188, 207, 96, 1) 100%);
+    background: linear-gradient(-45deg, #0a7151 0%, #1e9c75 25%, #bccf60 100%);
     color: white;
     text-align: center;
     width: 80px;
@@ -1262,4 +1262,53 @@ h6 {
     border: 5px solid #ffffff;
     border-radius: 5px;
     font-size: 12px;
+    animation:  customCirculate 15s infinite;
+}
+@keyframes customCirculate {
+    0% {
+            border-color: #ffffff;
+        }
+    25%{
+         border-color: #bccf60;
+    }
+    50%{
+        border-color: #07bb82;
+    }
+    75%{
+        border-color: #1e9c75;
+    }
+    100% {
+        border-color: #0a7151;
+    }
+}
+.search_mini{
+    display: none;
+}
+.search_large{
+    display: block;
+}
+.nav_icon_size{
+    font-size: 20px;
+}
+@media only screen and (max-width: 1199px) {
+    .search_mini{
+        display: block;
+    }
+    .search_large{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .mini_screen {
+            display: none;
+        }
+}
+.btn{
+    color: white;
+    background-color: #0a7151;
+}
+
+.btn:hover{
+    color: #201b1b;
+    background-color: #bccf60;
 }

@@ -1,3 +1,6 @@
+@php
+$route_name = str_replace(array("/","-",".","_") , " ",strtoupper(request()->route()->getName()));
+@endphp
 <!DOCTYPE html>
 <html lang="en">
     @include('frontend.components.head')
@@ -6,6 +9,7 @@
     @include('frontend.components.sidebar')
     <main id="main" class="main">
         @include('frontend.components.breadcrumb')
+        @if(($route_name !== 'LOG IN')||($route_name !== 'REGISTERHERE'))
         <div class="float-cart shadow">
             <div class="p-2">
                 <i class="bi bi-basket3"></i>
@@ -13,6 +17,7 @@
                 <p>Total price:0 &#x9F3;</p>
             </div>
         </div>
+        @endif
         @yield('content')
     </main>
     @include('frontend.components.footer')
