@@ -15,4 +15,11 @@ class LoginAccessController extends Controller
     public function Register(){
         return view('frontend.pages.auth.login-register.register');
     }
+
+    public function StoreUser(Request $req){
+         $validator = $req->validate([
+               'phone' => 'required|unique:users,phone|numeric|digits:11',
+               'email' => 'email:rfc,dns'
+           ]);
+    }
 }

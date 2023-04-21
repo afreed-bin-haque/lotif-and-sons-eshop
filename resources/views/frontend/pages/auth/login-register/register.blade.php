@@ -14,12 +14,12 @@
                             <p class="text-center small">ডেশবোর্ডে প্রবেশ করতে আপনার রেজিস্টার্ড ফোন নাম্বার ও পাসওয়ার্ড দিন</p>
                         </div>
 
-                        <form class="row g-3 needs-validation" novalidate="">
-
+                        <form class="row g-3 needs-validation" action="{{ route('store.user_registration') }}" method="POST">
+                            @csrf
                             <div class="col-12">
                                 <label for="name" class="form-label">আপনার নাম</label>
                                 <div class="input-group has-validation">
-                                    <input type="text" class="form-control" id="name" name="name" required="">
+                                    <input type="text" class="form-control" id="name" name="name" required="" value="{{ request()->old('name') }}">
                                     <div class="invalid-feedback">আপনার নাম লিখুন</div>
                                 </div>
                             </div>
@@ -28,20 +28,26 @@
                                 <label for="yourUsername" class="form-label">ফোন নাম্বার</label>
                                 <div class="input-group has-validation">
                                     <input type="number" name="phone" class="form-control" id="phone"
-                                        required="">
+                                        required="" value="{{ request()->old('phone') }}">
                                     <div class="invalid-feedback">আপনার ফোন নাম্বার লিখুন</div>
                                 </div>
+                                @error('phone')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12">
                                 <label for="yourUsername" class="form-label">ইমেইল অ্যাড্রেস <span class="text-success">(ঐচ্ছিক *** পাসওয়ার্ড রিকভারির জন্য প্রযোজ্য)</span></label>
                                 <div class="input-group has-validation">
-                                    <input type="email" name="email" class="form-control" id="email" >
+                                    <input type="email" name="email" class="form-control" id="email" value="{{ request()->old('email') }}"s>
                                 </div>
+                                @error('email')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">
                                 <label for="yourPassword" class="form-label">পাসওয়ার্ড</label>
-                                <input type="password" name="password" class="form-control text-center" id="password
+                                <input type="password" name="password" class="form-control text-center" id="password"
                                     required="">
                                 <div class="invalid-feedback">আপনার পাসওয়ার্ড লিখুন</div>
                             </div>

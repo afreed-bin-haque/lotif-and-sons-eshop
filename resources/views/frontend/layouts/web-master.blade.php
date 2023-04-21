@@ -16,7 +16,9 @@
         @yield('content')
     </main>
     @include('frontend.components.footer')
-    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/apple-touch-icon.png') }}" class="img-thumbnail" alt="Go Top"></a> -->
+    <a href="https://wa.me/{{ config('siteConfig.app.whatsapp') }}?text=হ্যালো আমি আপনাদের লতিফ এন্ড সন্স ওয়েবসাইট থেকে এসেছি । কিছু প্রশ্ন ছিল।" class="whats-app gradient shadow" target="_blank">
+        <span class="p-3"><i class="bi bi-whatsapp whats-app-icon"></i> Contact us</span>
+    </a>
     <div id="preloader"></div>
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>

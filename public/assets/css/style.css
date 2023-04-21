@@ -18,8 +18,11 @@ a {
 }
 
 a:hover {
-  color: #717ff5;
+  color: #80ffdb;
   text-decoration: none;
+}
+a:active {
+    transform: translateY(4px);
 }
 
 h1,
@@ -60,40 +63,39 @@ h6 {
   font-weight: 600;
   color: #0a7151;
 }
-
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: #0a7151;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
+.whats-app {
+    position: fixed;
+    right: 15px;
+    top: 90%;
+    z-index: 99999;
+    width: 125px;
+    height: 25px;
+    border-radius: 15px;
+    color: white;
+    animation: gradient 1s ease infinite;
+}
+.gradient {
+    background: linear-gradient(-45deg, #075e54, #0a7151, #25d366);
+    background-size: 400% 400%;
+    animation: gradient-bg 20s ease infinite;
 }
 
-.back-to-top i {
-  font-size: 24px;
-  color: #fff;
-  line-height: 0;
-}
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
 
-.back-to-top:hover {
-  background: #6776f4;
-  color: #fff;
-}
+    50% {
+        background-position: 100% 50%;
+    }
 
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
+    100% {
+        background-position: 0% 50%;
+    }
 }
-
+.whats-app-icon{
+    font-size: 16px;
+}
 /*--------------------------------------------------------------
 # Override some default Bootstrap stylings
 --------------------------------------------------------------*/
