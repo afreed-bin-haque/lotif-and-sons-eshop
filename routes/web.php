@@ -20,6 +20,7 @@ Route::get('/',[PageController::class,'Index'])->name('welcome');
 Route::get('/cart',[PageController::class,'Index'])->name('cart');
 Route::prefix('log')->group(function(){
     Route::get('/in',[LoginAccessController::class,'ViewLoginPage'])->name('log.in');
+    Route::post('/in/verify',[LoginAccessController::class,'ViewLoginPage'])->name('log.in_verify');
 });
 Route::get('/register',[LoginAccessController::class,'Register'])->name('register.here');
 Route::post('/store/user/registration',[LoginAccessController::class,'StoreUser'])->name('store.user_registration');

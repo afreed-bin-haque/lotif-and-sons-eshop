@@ -13,6 +13,7 @@
                             <h5 class="card-title text-center pb-0 fs-4">আপনার ডেশবোর্ডে প্রবেশ করুন</h5>
                             <p class="text-center small">ডেশবোর্ডে প্রবেশ করতে আপনার রেজিস্টার্ড ফোন নাম্বার ও পাসওয়ার্ড দিন</p>
                         </div>
+                        @include('frontend.components.push-notification')
 
                         <form class="row g-3 needs-validation" novalidate="">
 

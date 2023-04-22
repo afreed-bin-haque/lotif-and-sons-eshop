@@ -31,7 +31,7 @@
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{ route('view.upload_list') }}">
                     <i class="bi bi-camera2 nav_icon_size"></i>
                     <div class="mini_screen">
-                        <span class="d-none d-md-block ps-2 pe-2">লিস্ট আপলোড করুন</span>
+                        <span class="d-none d-md-block ps-2 pe-2 nave_link_font">লিস্ট আপলোড করুন</span>
                     </div>
                 </a><!-- End Profile Iamge Icon -->
 
@@ -44,7 +44,7 @@
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#">
                     <i class="bi bi-person-circle nav_icon_size"></i>
                     <div class="mini_screen">
-                        <span class="d-none d-md-block ps-2">অ্যাকাউন্ট</span>
+                        <span class="d-none d-md-block ps-2 nave_link_font">অ্যাকাউন্ট</span>
                     </div>
                 </a><!-- End Profile Iamge Icon -->
 
@@ -53,7 +53,7 @@
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{ route('log.in') }}">
                     <i class="bi bi-box-arrow-in-right nav_icon_size"></i>
                     <div class="mini_screen">
-                        <span class="d-none d-md-block ps-2">লগইন করুন</span>
+                        <span class="d-none d-md-block ps-2 nave_link_font">লগইন করুন</span>
                     </div>
                 </a><!-- End Profile Iamge Icon -->
 
