@@ -1296,6 +1296,18 @@ h6 {
 .nav_icon_size{
     font-size: 20px;
 }
+.image-holder {
+    padding-bottom: 10px;
+    height: 400px;
+    width: 650px;
+    border: 2px solid #0a7151;
+    border-style: dashed;
+}
+
+#imgPreview {
+    height: 400px;
+    width: 650px;
+}
 @media only screen and (max-width: 1199px) {
     .search_mini{
         display: block;
@@ -1305,6 +1317,17 @@ h6 {
     }
     .custom_padding{
         padding-top: 15px;
+    }
+    .image-holder {
+        padding-bottom: 10px;
+        height: 100px;
+        width: 250px;
+        border: 2px solid #0a7151;
+        border-style: dashed;
+    }
+    #imgPreview {
+        height: 100px;
+        width: 250px;
     }
 }
 @media only screen and (max-width: 1400px) {
@@ -1357,4 +1380,13 @@ h6 {
 }
 nave_link_font{
     font-size: 12px;
+}
+.go-back{
+    background-color: #0a7151;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.go-back:active{
+    transform: translateY(4px);
 }

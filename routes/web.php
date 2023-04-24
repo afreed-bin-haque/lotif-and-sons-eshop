@@ -25,5 +25,5 @@ Route::prefix('log')->group(function(){
 Route::get('/register',[LoginAccessController::class,'Register'])->name('register.here');
 Route::post('/store/user/registration',[LoginAccessController::class,'StoreUser'])->name('store.user_registration');
 Route::prefix('visitor')->group(function(){
-    Route::get('/upload/list',[VisitorController::class,'ViewUploadList'])->name('view.upload_list');
+    Route::get('/upload/list',[VisitorController::class,'ViewUploadList'])->name('upload.your_list');
 });
