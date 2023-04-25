@@ -9,10 +9,7 @@
         @yield('content')
     </main>
     @include('frontend.components.footer')
-    <a href="https://wa.me/{{ config('siteConfig.app.whatsapp') }}?text=হ্যালো আমি আপনাদের লতিফ এন্ড সন্স ওয়েবসাইট থেকে এসেছি । কিছু প্রশ্ন ছিল।"
-        class="whats-app gradient shadow" target="_blank">
-        <span class="p-3"><i class="bi bi-whatsapp whats-app-icon"></i> Contact us</span>
-    </a>
+    @include('frontend.components.whatsapp')
     <div id="preloader"></div>
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>

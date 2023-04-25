@@ -2,17 +2,21 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="{{ route('welcome') }}" class="logo d-flex align-items-center">
+        <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
+        <img src="{{ asset('assets/img/list.svg') }}" alt="মেন্যু" class="toggle-sidebar-btn nav_icon_name">
+        <a href="{{ route('welcome') }}" class="logo d-flex align-items-center nav_icon_name">
             <img src="{{ asset('assets/img/logo.png') }}" alt="{{ config('siteConfig.app.name') }}">
             <span class="d-none d-lg-block">লতিফ এন্ড সন্স</span>
         </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
     <div class="search-bar col-lg-8">
         <form class="search-form d-flex align-items-center category_hoolder" method="get" action="#">
             <input type="text" name="query" placeholder="এখানে সার্চ করুন" title="এখানে সার্চ করুন">
-            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            <button type="submit" title="Search">
+                <!-- <i class="bi bi-search"></i> -->
+                <img src="{{ asset('assets/img/search.svg') }}" alt="মেন্যু" class="nav_icon_size aux_icon_name">
+            </button>
         </form>
     </div><!-- End Search Bar -->
 
@@ -22,7 +26,8 @@
 
             <li class="nav-item search_mini">
                 <a class="nav-link nav-icon search-bar-toggle " href="#">
-                    <i class="bi bi-search nav_icon_size"></i>
+                    <!-- <i class="bi bi-search nav_icon_size"></i> -->
+                    <img src="{{ asset('assets/img/search.svg') }}" alt="মেন্যু" class="nav_icon_size aux_icon_name">
                 </a>
             </li><!-- End Search Icon-->
 

@@ -15,8 +15,8 @@
                         </div>
                         @include('frontend.components.push-notification')
 
-                        <form class="row g-3 needs-validation" novalidate="">
-
+                        <form class="row g-3 needs-validation" action="{{ route('log.in_verify') }}" novalidate="" method="POST">
+                            @csrf
                             <div class="col-12">
                                 <label for="yourUsername" class="form-label">ফোন নাম্বার</label>
                                 <div class="input-group has-validation">
@@ -24,6 +24,9 @@
                                         required="" value="{{ request()->old('phone') }}">
                                     <div class="invalid-feedback">আপনার রেজিস্টার্ড ফোন নাম্বার দিন</div>
                                 </div>
+                                @error('phone')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">
@@ -31,6 +34,9 @@
                                 <input type="password" class="form-control text-center" id="password" name="password"
                                     required="" value="{{ request()->old('password') }}">
                                 <div class="invalid-feedback">আপনার পাসওয়ার্ড দিন</div>
+                                @error('password')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">

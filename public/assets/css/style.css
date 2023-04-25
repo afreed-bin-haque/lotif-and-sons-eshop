@@ -383,13 +383,6 @@ h6 {
   /* Search Bar */
 }
 
-.header .toggle-sidebar-btn {
-  font-size: 32px;
-  padding-left: 10px;
-  cursor: pointer;
-  color: #0a7151;
-}
-
 .header .search-bar {
   min-width: 360px;
   padding: 0 20px;
@@ -1398,4 +1391,13 @@ nave_link_font{
 }
 .go-back:active{
     transform: translateY(4px);
+}
+.nav_icon_name{
+    height: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.aux_icon_name{
+    height: 16px;
+    cursor: pointer;
 }
