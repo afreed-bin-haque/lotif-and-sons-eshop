@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-                <div class="card mb-3">
+                <div class="card mb-3 upload_list">
 
                     <div class="card-body">
 
@@ -15,7 +15,8 @@
                         </div>
                         @include('frontend.components.push-notification')
 
-                        <form class="row g-3 needs-validation" novalidate="">
+                        <form class="row g-3 needs-validation" action="{{ route('submit.your_list') }}" method="POST" novalidate="" enctype="multipart/form-data">
+                            @csrf
                             <div class="col-12">
                                 <div class="image-holder">
                                     <img id="imgPreview" src="#" alt="আপনার বাজার লিস্ট" />
@@ -28,6 +29,9 @@
                                         value="{{ request()->old('phone') }}">
                                     <div class="invalid-feedback">আপনার ফোন নাম্বার দিন</div>
                                 </div>
+                                @error('phone')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">
@@ -35,6 +39,25 @@
                                 <textarea class="form-control" style="height: 100px"
                                 id="address" name="address" required="">{{ request()->old('address') }}</textarea>
                                 <div class="invalid-feedback">আপনার পাসওয়ার্ড দিন</div>
+                                @error('address')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-12">
+                                <label for="yourUsername" class="form-label">জোন</label>
+                                <div class="input-group has-validation">
+                                    <select class="form-select" aria-label="আপনার জোন" id="zone" name="zone" required="">
+                                        <option selected="" value="">আপনার জোন সিলেক্ট করুন</option>
+                                        <option value="Sector-12">Sector -12</option>
+                                        <option value="Tongi">Tongi</option>
+                                        <option value="Sector-09">Sector-09</option>
+                                        <option value="Sector-14">Sector-14</option>
+                                    </select>
+                                    <div class="invalid-feedback">আপনার জোন সিলেক্ট করুন</div>
+                                </div>
+                                @error('zone')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12">
                                 <label for="yourUsername" class="form-label">লিস্ট আপলোড</label>

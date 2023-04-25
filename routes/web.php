@@ -26,4 +26,5 @@ Route::get('/register',[LoginAccessController::class,'Register'])->name('registe
 Route::post('/store/user/registration',[LoginAccessController::class,'StoreUser'])->name('store.user_registration');
 Route::prefix('visitor')->group(function(){
     Route::get('/upload/list',[VisitorController::class,'ViewUploadList'])->name('upload.your_list');
+    Route::post('submit/upload/list',[VisitorController::class,'StoreGroceryList'])->name('submit.your_list');
 });

@@ -13,12 +13,14 @@ $(document).ready(function () {
     $('#main_image').change(function () {
         const file = this.files[0];
         if (file) {
+            $('.image-holder').css('display','block');
             let reader = new FileReader();
             reader.onload = function (event) {
-                console.log(event.target.result);
                 $('#imgPreview').attr('src', event.target.result);
             }
             reader.readAsDataURL(file);
+        }else{
+            $('.image-holder').css('display', 'none');
         }
     });
 });

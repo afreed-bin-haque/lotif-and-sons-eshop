@@ -5,6 +5,7 @@
 
         <!-- center columns -->
         <div class="col-lg-12">
+            @include('frontend.components.push-notification')
 
             <div class="card" style="max-height:15rem;color:#0a7151">
                 <img src="assets/img/card.jpg" class="card-img-top" style="max-height:15rem">
