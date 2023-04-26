@@ -8,7 +8,7 @@
         @include('frontend.components.breadcrumb')
         <div class="float-cart shadow">
             <div class="p-2">
-                <i class="bi bi-basket3"></i>
+                <img src="{{ asset('assets/img/basket3-white.svg') }}" alt="cart" class="nav_icon_size aux_icon_name">
                 <p>Total item:0</p>
                 <p>Total price:0 &#x9F3;</p>
             </div>

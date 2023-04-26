@@ -7,6 +7,7 @@ use App\Helpers\helper;
 use Illuminate\Http\Request;
 use Session;
 use Haruncpi\LaravelIdGenerator\IdGenerator As IDGen;
+use App\Models\Admin;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -29,7 +30,19 @@ class LoginAccessController extends Controller
         if($verify_user === 'Not-allowed'){
             return redirect()->route('log.in')->with('failed','দুঃখিত, আপনার ফোন নাম্বার সঠিক নয়।');
         }else{
-
+            if($verify_user === 'Admin'){
+                $fetch_details = Admin::where('phone',$phone)->take(1)->get();
+                foreach($fetch_details as $admin_details){
+                    $old_password = $admin_details->password;
+                }
+                dd($old_password);
+            }elseif($verify_user === 'User'){
+                $fetch_details = User::where('phone',$phone)->take(1)->get();
+                foreach($fetch_details as $user_details){
+                    $old_password = $user_details->password;
+                }
+                dd($old_password);
+            }
         }
     }
 

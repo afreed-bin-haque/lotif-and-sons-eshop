@@ -5,13 +5,13 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('welcome') }}">
-                <i class="bi bi-grid"></i>
+            <img src="{{ asset('assets/img/home.svg') }}" alt="home" class="nav_icon_size aux_icon_side pe-3">
                 <span class="{{ '/' === request()->path() ? 'nav_active': '' }}">হোমপেজ</span>
             </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item">
             <a class="nav-link" href="{{ route('cart') }}">
-                <i class="bi bi-basket3"></i>
+                <img src="{{ asset('assets/img/basket3.svg') }}" alt="home" class="nav_icon_size aux_icon_side pe-3">
                 <span class="{{ 'cart' === request()->path() ? 'nav_active': '' }}">কার্ট</span>
             </a>
         </li><!-- End Dashboard Nav -->

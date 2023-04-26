@@ -2,7 +2,6 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
         <img src="{{ asset('assets/img/list.svg') }}" alt="মেন্যু" class="toggle-sidebar-btn nav_icon_name">
         <a href="{{ route('welcome') }}" class="logo d-flex align-items-center nav_icon_name">
             <img src="{{ asset('assets/img/logo.png') }}" alt="{{ config('siteConfig.app.name') }}">
@@ -14,7 +13,6 @@
         <form class="search-form d-flex align-items-center category_hoolder" method="get" action="#">
             <input type="text" name="query" placeholder="এখানে সার্চ করুন" title="এখানে সার্চ করুন">
             <button type="submit" title="Search">
-                <!-- <i class="bi bi-search"></i> -->
                 <img src="{{ asset('assets/img/search.svg') }}" alt="মেন্যু" class="nav_icon_size aux_icon_name">
             </button>
         </form>
@@ -26,7 +24,6 @@
 
             <li class="nav-item search_mini">
                 <a class="nav-link nav-icon search-bar-toggle " href="#">
-                    <!-- <i class="bi bi-search nav_icon_size"></i> -->
                     <img src="{{ asset('assets/img/search.svg') }}" alt="মেন্যু" class="nav_icon_size aux_icon_name">
                 </a>
             </li><!-- End Search Icon-->
@@ -34,7 +31,7 @@
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{ route('upload.your_list') }}">
-                    <i class="bi bi-camera2 nav_icon_size"></i>
+                    <img src="{{ asset('assets/img/camera2.svg') }}" alt="লিস্ট" class="nav_icon_size aux_icon_name">
                     <div class="mini_screen">
                         <span class="d-none d-md-block ps-2 pe-2 nave_link_font">লিস্ট আপলোড করুন</span>
                     </div>
@@ -56,7 +53,8 @@
                 @else
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{ route('log.in') }}">
-                    <i class="bi bi-box-arrow-in-right nav_icon_size"></i>
+                    <!-- <i class="bi bi-box-arrow-in-right nav_icon_size"></i> -->
+                    <img src="{{ asset('assets/img/login.svg') }}" alt="লগইন" class="nav_icon_size aux_icon_name">
                     <div class="mini_screen">
                         <span class="d-none d-md-block ps-2 nave_link_font">লগইন করুন</span>
                     </div>

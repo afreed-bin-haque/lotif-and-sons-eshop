@@ -1242,7 +1242,11 @@ h6 {
 .category_detail{
     color: #0a7151;
     font-size: 18px;
-    text-align: center;
+    float: left;
+}
+.category_icon{
+    width: 50px;
+    float: right;
 }
 .category_hoolder{
     border: 1px solid #0a7151;
@@ -1307,6 +1311,14 @@ h6 {
     height: 400px;
     width: 100%;
 }
+.offer_image{
+    height: auto;
+    width: 400px;
+}
+.preview_product_img{
+    height: auto;
+    width: 200px;
+}
 @media only screen and (max-width: 1199px) {
     .search_mini{
         display: block;
@@ -1345,6 +1357,15 @@ h6 {
 .btn:hover{
     color: #201b1b;
     background-color: #bccf60;
+}
+.price_holder{
+    color: #0a7151;
+    padding: 5px;
+    background-color: #bccf60;
+    border: 1px solid #0a7151;
+    border-style: dashed;
+    border-radius: 5px;
+    font-weight: 600;
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -1398,6 +1419,35 @@ nave_link_font{
     cursor: pointer;
 }
 .aux_icon_name{
-    height: 16px;
+    width: 24px;
     cursor: pointer;
+}
+.aux_icon_side{
+    height: 24px;
+    cursor: pointer;
+}
+.aux_icon_contact {
+    width: 16px;
+    cursor: pointer;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0a7151;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bccf60;
 }
