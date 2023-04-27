@@ -1323,6 +1323,10 @@ h6 {
     height: auto;
     width: 200px;
 }
+.preview_product_img_detail{
+    height: auto;
+    width: 400px;
+}
 @media only screen and (max-width: 1199px) {
     .search_mini{
         display: block;
@@ -1470,7 +1474,7 @@ nave_link_font{
 
 .img_preview_details:hover {
     border: none;
-    padding: 10px;
+    padding: 5px;
     -ms-transform: scale(2);
     /* IE 9 */
     -webkit-transform: scale(2);
@@ -1478,9 +1482,42 @@ nave_link_font{
     transform: scale(2);
 }
 .product_helper_text{
-    background-color: #e4e4e4;
+    background-color: #d8e983;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .modal_holder{
     border: 2px solid #bccf60;
     border-style: dashed;
+}
+.modal_header_container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.conten_lef{
+    float: left;
+}
+.conten_right{
+    float: right;
+}
+.product_details_text{
+    color: #0a7151;
+}
+ul li {
+  list-style: none;
+  padding-left: 5px;
+  position: relative;
+  display: inline;
+}
+
+ul li:before {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  display: inline-block;
+}
+
+.payment_method_icon {
+    height: auto;
+    width: 40px;
 }
