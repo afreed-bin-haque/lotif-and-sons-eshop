@@ -6,6 +6,7 @@
     @include('frontend.components.sidebar')
     <main id="main" class="main">
         @include('frontend.components.breadcrumb')
+        @include('frontend.pages.website.helping-pages.product-details-preview-model')
         <div class="float-cart shadow">
             <div class="p-2">
                 <img src="{{ asset('assets/img/basket3-white.svg') }}" alt="cart" class="nav_icon_size aux_icon_name">

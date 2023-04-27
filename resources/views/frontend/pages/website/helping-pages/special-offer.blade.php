@@ -6,7 +6,6 @@
 
         <div class="col-md-6 col-xl-3">
 
-            <a href="#">
                 <div class="card category_hoolder">
                     <div class="card-body">
                         <div class="row pt-3">
@@ -21,17 +20,17 @@
                         <img class="img-fluid d-flex mx-auto my-4 preview_product_img"
                             src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp" alt="ORSaline-N">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                           <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                এখনি কিনুন
+              </button>
                         </div>
                     </div>
                 </div>
-            </a>
 
         </div>
 
     <div class="col-md-6 col-xl-3">
 
-        <a href="#">
             <div class="card category_hoolder">
                 <div class="card-body">
                     <div class="row pt-3">
@@ -47,17 +46,17 @@
                         src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp"
                         alt="ORSaline-N">
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                       <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                এখনি কিনুন
+              </button>
                     </div>
                 </div>
             </div>
-        </a>
 
     </div>
 
     <div class="col-md-6 col-xl-3">
 
-        <a href="#">
             <div class="card category_hoolder">
                 <div class="card-body">
                     <div class="row pt-3">
@@ -73,17 +72,17 @@
                         src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp"
                         alt="ORSaline-N">
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                       <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                এখনি কিনুন
+              </button>
                     </div>
                 </div>
             </div>
-        </a>
 
     </div>
 
     <div class="col-md-6 col-xl-3">
 
-        <a href="#">
             <div class="card category_hoolder">
                 <div class="card-body">
                     <div class="row pt-3">
@@ -99,17 +98,17 @@
                         src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp"
                         alt="ORSaline-N">
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                       <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                এখনি কিনুন
+              </button>
                     </div>
                 </div>
             </div>
-        </a>
 
     </div>
 
         <div class="col-md-6 col-xl-3">
 
-            <a href="#">
                 <div class="card category_hoolder">
                     <div class="card-body">
                         <div class="row pt-3">
@@ -125,17 +124,17 @@
                             src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp"
                             alt="ORSaline-N">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                           <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                এখনি কিনুন
+              </button>
                         </div>
                     </div>
                 </div>
-            </a>
 
         </div>
 
         <div class="col-md-6 col-xl-3">
 
-            <a href="#">
                 <div class="card category_hoolder">
                     <div class="card-body">
                         <div class="row pt-3">
@@ -151,17 +150,17 @@
                             src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp"
                             alt="ORSaline-N">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                            <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                                এখনি কিনুন
+                            </button>
                         </div>
                     </div>
                 </div>
-            </a>
 
         </div>
 
         <div class="col-md-6 col-xl-3">
 
-            <a href="#">
                 <div class="card category_hoolder">
                     <div class="card-body">
                         <div class="row pt-3">
@@ -177,11 +176,12 @@
                             src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp"
                             alt="ORSaline-N">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">এখনি কিনুন</a>
+                           <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_details_view">
+                এখনি কিনুন
+              </button>
                         </div>
                     </div>
                 </div>
-            </a>
 
         </div>
 

@@ -1256,7 +1256,7 @@ h6 {
     position: fixed;
     right: 15px;
     top: 50%;
-    z-index: 99999;
+    z-index: 999;
     background: linear-gradient(-45deg, #0a7151 0%, #1e9c75 25%, #bccf60 100%);
     color: white;
     text-align: center;
@@ -1266,6 +1266,10 @@ h6 {
     border-radius: 5px;
     font-size: 12px;
     animation:  customCirculate 15s infinite;
+}
+.img_border{
+    border: 1px solid #0a7151;
+    border-radius: 5px;
 }
 @keyframes customCirculate {
     0% {
@@ -1357,6 +1361,14 @@ h6 {
 .btn:hover{
     color: #201b1b;
     background-color: #bccf60;
+}
+.danger{
+    color: white;
+    border-radius: 50%;
+    background-color: #d90429;
+}
+.danger:active {
+    transform: translateY(4px);
 }
 .price_holder{
     color: #0a7151;
@@ -1450,4 +1462,25 @@ nave_link_font{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #bccf60;
+}
+
+.img_preview_details {
+    transition: transform .2s;
+}
+
+.img_preview_details:hover {
+    border: none;
+    padding: 10px;
+    -ms-transform: scale(2);
+    /* IE 9 */
+    -webkit-transform: scale(2);
+    /* Safari 3-8 */
+    transform: scale(2);
+}
+.product_helper_text{
+    background-color: #e4e4e4;
+}
+.modal_holder{
+    border: 2px solid #bccf60;
+    border-style: dashed;
 }
