@@ -1529,7 +1529,7 @@ ul li:before {
     background-origin: #0a7151;
     color: white;
 }
-.padding: 5px;:active {
+.padding:active {
     transform: translateY(4px);
 }
 .minus {
