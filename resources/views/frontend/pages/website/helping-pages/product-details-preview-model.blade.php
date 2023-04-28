@@ -14,16 +14,46 @@
                                 src="http://localhost/pharmacheck/public/assets/img/medicine/1762357035059258.webp" alt="ORSaline-N">
                         </div>
                         <div class="col-md-8 col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    count
+                            <div class="row">
+                                range
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row pt-3">
+                                                <div class="col-6">
+                                                    <div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn minus" data-type="minus">
+                                                                -
+                                                            </button>
+                                                        </span>
+                                                        <span class="input_holder">
+                                                            <input type="text" class="form-control input-number text-center increment_field" id="store_bought"
+                                                                name="store_bought" value="0" min="1">
+                                                        </span>
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn plus" data-type="plus">
+                                                                +
+                                                            </button>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn"> কার্টে যোগ করুন</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     <div class="col-12">
                         <div class="card shadow">
                             <div class="card-body product_helper_text">
-                                <div class="row">
+                                <div class="row pb-5">
                                     <div class="col-12">
                                         <p class="conten_lef product_details_text">প্রোডাক্ট কিনুন ক্যাশ অন ডেলিভারি বা অনলাইন পেমেন্টে</p>
                                         <span class="conten_right">
@@ -35,6 +65,15 @@
                                         </span>
                                     </div>
                                     <hr class="section_hr">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            done
+                                        </div>
+                                        <div class="col-4 verticalLine">
+                                            some other content
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
