@@ -43,8 +43,8 @@
 
                 @if(session()->has('access_token'))
 
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#">
-                    <i class="bi bi-person-circle nav_icon_size"></i>
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{ route('dashboard') }}">
+                    <img src="{{ asset('assets/img/person-circle.svg') }}" alt="অ্যাকাউন্ট" class="nav_icon_size aux_icon_name">
                     <div class="mini_screen">
                         <span class="d-none d-md-block ps-2 nave_link_font">অ্যাকাউন্ট</span>
                     </div>

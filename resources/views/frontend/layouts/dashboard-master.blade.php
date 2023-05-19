@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    @include('frontend.components.head')
+@include('frontend.components.head')
+
 <body>
     @include('frontend.components.navbar')
-    @include('frontend.components.sidebar-dashboard')
+    @include('frontend.components.sidebar')
     <main id="main" class="main">
         @include('frontend.components.breadcrumb')
         @yield('content')
@@ -25,4 +26,5 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/typed-jquery.js') }}"></script>
 </body>
+
 </html>

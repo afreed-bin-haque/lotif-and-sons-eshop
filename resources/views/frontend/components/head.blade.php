@@ -1,6 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ str_replace(array("/","-",".","_") , " ",strtoupper(request()->route()->getName())) }} | {{
   config('siteConfig.app.name') }}</title>
 
@@ -28,7 +29,8 @@
   <!--  Main CSS File -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
   <!--  Jquery -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script href="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script> -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>

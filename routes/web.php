@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Backend\LoginAccessController;
+use App\Http\Controllers\Backend\BackendPageController;
 use App\Http\Controllers\Visitor\VisitorController;
+use App\Http\Middleware\Backend\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +29,16 @@ Route::post('/store/user/registration',[LoginAccessController::class,'StoreUser'
 Route::prefix('visitor')->group(function(){
     Route::get('/upload/list',[VisitorController::class,'ViewUploadList'])->name('upload.your_list');
     Route::post('submit/upload/list',[VisitorController::class,'StoreGroceryList'])->name('submit.your_list');
+});
+
+Route::middleware([auth::class])->group(function () {
+    Route::prefix('dashboard')->group(function(){
+        Route::get('/view',[BackendPageController::class,'dashboard'])->name('dashboard');
+    });
+});
+
+
+/* Page Helpers */
+Route::prefix('dashboard')->group(function(){
+    Route::get('/get/main',[BackendPageController::class,'MainGridLoader'])->name('fetch.main-div');
 });

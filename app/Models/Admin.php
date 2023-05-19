@@ -17,7 +17,6 @@ class Admin extends Model
         'password',
         'path',
         'access_token',
-        'device',
         'timelimit',
         'status'
     ];

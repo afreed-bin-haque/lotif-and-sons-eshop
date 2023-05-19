@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('password');
             $table->string('path')->nullable();
             $table->longText('access_token')->nullable();
-            $table->string('device')->nullable();
             $table->string('timelimit')->nullable();
             $table->string('status')->default('Active');
             $table->rememberToken();

@@ -24,25 +24,60 @@ class LoginAccessController extends Controller
                'phone' => 'required|numeric|digits:11',
                'password' => 'required',
            ]);
-           $phone = $req->phone;
-           $password = $req->password;
-           $verify_user = helper::ValidateUser($phone);
+        $phone = $req->phone;
+        $password = $req->password;
+        $verify_user = helper::ValidateUser($phone);
+        $verify_password = helper::ValidatePassword($phone,$password);
         if($verify_user === 'Not-allowed'){
             return redirect()->route('log.in')->with('failed','দুঃখিত, আপনার ফোন নাম্বার সঠিক নয়।');
-        }else{
+        }elseif($verify_password === 'Not-allowed'){
+            return redirect()->route('log.in',['phone'=>$phone])->with('failed','দুঃখিত, আপনি ভুল পাসওয়ার্ড দিয়েছেন। সঠিক পাসওয়ার্ড দিন।');
+        }elseif($verify_password === 'Allowed'){
             if($verify_user === 'Admin'){
+                $generate_access = helper::AccessToken($phone);
+                $save_access_token = Admin::where('phone',$phone)->update([
+                    'access_token' => $generate_access,
+                    'updated_at' => Carbon::now()
+                ]);
                 $fetch_details = Admin::where('phone',$phone)->take(1)->get();
                 foreach($fetch_details as $admin_details){
                     $old_password = $admin_details->password;
+                    $access_token = $admin_details->access_token;
+                    $path = $admin_details->path;
                 }
-                dd($old_password);
+                if(Hash::check($password,$old_password)){
+                    Session::put([
+                     'path' => $path,
+                     'access_token' => $access_token,
+                    ]);
+                    return redirect()->route('dashboard');
+                }else{
+                    return redirect()->route('log.in',['phone'=>$phone])->with('failed','দুঃখিত, আপনার প্রদত্ত তথ্য সঠিক নয়');
+                }
             }elseif($verify_user === 'User'){
+                $generate_access = helper::AccessToken($phone);
+                $save_access_token = User::where('phone',$phone)->update([
+                    'access_token' => $generate_access,
+                    'updated_at' => Carbon::now()
+                ]);
                 $fetch_details = User::where('phone',$phone)->take(1)->get();
                 foreach($fetch_details as $user_details){
                     $old_password = $user_details->password;
+                    $access_token = $user_details->access_token;
+                    $path = $user_details->path;
                 }
-                dd($old_password);
+                if(Hash::check($password,$old_password)){
+                    Session::put([
+                     'path' => $path,
+                     'access_token' => $access_token,
+                    ]);
+                    return redirect()->route('dashboard');
+                }else{
+                    return redirect()->route('log.in',['phone'=>$phone])->with('failed','দুঃখিত, আপনার প্রদত্ত তথ্য সঠিক নয়');
+                }
             }
+        }else{
+            return redirect()->route('log.in',['phone'=>$phone])->with('failed','দুঃখিত, আপনি ভুল পাসওয়ার্ড দিয়েছেন। সঠিক পাসওয়ার্ড দিন।');
         }
     }
 

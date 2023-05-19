@@ -20,8 +20,12 @@
                             <div class="col-12">
                                 <label for="yourUsername" class="form-label">ফোন নাম্বার</label>
                                 <div class="input-group has-validation">
+                                    @if(!empty(request()->phone))
                                     <input type="number" class="form-control" id="phone" name="phone"
-                                        required="" value="{{ request()->old('phone') }}">
+                                        required="" value="{{ request()->phone }}">
+                                    @else
+                                    <input type="number" class="form-control" id="phone" name="phone" required="">
+                                    @endif
                                     <div class="invalid-feedback">আপনার রেজিস্টার্ড ফোন নাম্বার দিন</div>
                                 </div>
                                 @error('phone')

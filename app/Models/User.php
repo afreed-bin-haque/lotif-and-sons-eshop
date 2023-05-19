@@ -26,7 +26,6 @@ class User extends Authenticatable
         'password',
         'path',
         'access_token',
-        'device',
         'timelimit',
         'status'
     ];
